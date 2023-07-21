@@ -5,17 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="419" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Height="35" Width="100"/>
-        <RichTextBox Margin="10,118,18,161">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="RichTextBox"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="683,389,0,0" VerticalAlignment="Top" Height="37" Width="103"/>
+        <Button x:Name="buttonSend" Content="Надіслати" Margin="10,322,690,0" Height="34" VerticalAlignment="Top"/>
+        <Button x:Name="buttonExit" Content="Вихід" Margin="683,322,14,0" Height="37" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBoxChat" Margin="10,10,14,137" />
+        <TextBox x:Name="textBoxText" Margin="10,281,14,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14"/>
 
     </Grid>
 </Window>
