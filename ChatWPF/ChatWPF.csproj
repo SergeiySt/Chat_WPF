@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ChatMessage.cs" />
+    <Compile Include="ChatMessageTemplateSelector.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -97,6 +98,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Picture\p33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Picture\55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Picture\455.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Picture\77.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
