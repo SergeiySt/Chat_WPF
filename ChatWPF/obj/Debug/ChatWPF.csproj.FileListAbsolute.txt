@@ -14,3 +14,4 @@ D:\ДЗ_Шаг\Windows Forms C#\GitHub\Chat_WPF\ChatWPF\obj\Debug\ChatWPF.csproj
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Chat_WPF\ChatWPF\obj\Debug\ChatWPF.csproj.CoreCompileInputs.cache
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Chat_WPF\ChatWPF\obj\Debug\ChatWPF.exe
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Chat_WPF\ChatWPF\obj\Debug\ChatWPF.pdb
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Chat_WPF\ChatWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
