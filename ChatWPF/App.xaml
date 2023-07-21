@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:ChatWPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--<local:MessageStyleConverter x:Key="MessageStyleConverter" />-->
     </Application.Resources>
 </Application>
