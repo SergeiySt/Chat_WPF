@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatWPF"
         mc:Ignorable="d"
-        Title="Чат-бот" Height="419" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Чат-бот" Height="419" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded" Icon="/Picture/chat-26.ico">
     <Window.Resources>
         <Style x:Key="ChatMessageStyle" TargetType="ListBoxItem">
             <Setter Property="FontSize" Value="14" />
@@ -22,13 +22,31 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
+
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF1AA4DE" />
+            <Setter Property="Foreground" Value="#FFFBFBFB" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="15,5" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
-        <Button x:Name="buttonSend" Content="Надіслати" Margin="10,322,690,0" Height="34" VerticalAlignment="Top" Click="buttonSend_Click"/>
-        <Button x:Name="buttonExit" Content="Вихід" Margin="683,322,14,0" Height="37" VerticalAlignment="Top" Click="buttonExit_Click"/>
+        <Button x:Name="buttonSend" Content="Надіслати" Margin="10,322,690,0" Height="34" VerticalAlignment="Top" Click="buttonSend_Click" Style="{StaticResource RoundedButtonStyle}"/>
+        <Button x:Name="buttonExit" Content="Вихід" Margin="683,322,14,0" Height="37" VerticalAlignment="Top" Click="buttonExit_Click" Style="{StaticResource RoundedButtonStyle}"/>
         <ListBox x:Name="listBoxChat" Margin="10,10,14,0" Height="256" VerticalAlignment="Top" ItemContainerStyle="{StaticResource ChatMessageStyle}">
             <ListBox.Background>
-                <ImageBrush ImageSource="/Picture/77.png"/>
+                <ImageBrush ImageSource="/Picture/99.png"/>
             </ListBox.Background>
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -62,6 +80,6 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <TextBox x:Name="textBoxText" Margin="10,281,14,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="textBoxText" Margin="10,281,14,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14" PreviewKeyDown="textBoxText_PreviewKeyDown"/>
     </Grid>
 </Window>

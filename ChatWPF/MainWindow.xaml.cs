@@ -33,7 +33,9 @@ namespace ChatWPF
             "Це цікаво!",
             "Не розумію про що ти, але звучить кумедно.",
             "Скажи ще щось.",
-            "Привіт, чим можу допомогти?"
+            "Привіт, чим можу допомогти?",
+            "Слава України!",
+            ":))"
         };
 
         public MainWindow()
@@ -76,6 +78,10 @@ namespace ChatWPF
             {
                 return "Я можу відповідати на запитання та підтримувати розмови.";
             }
+            else if (userMessage.Contains("слава") || userMessage.Contains("Україна"))
+            {
+                return ":)";
+            }
             else
             {
                 Random random = new Random();
@@ -87,6 +93,19 @@ namespace ChatWPF
         private void buttonExit_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+
+        private void textBoxText_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                buttonSend_Click(sender, e);
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            textBoxText.Focus();
         }
     }
 }
